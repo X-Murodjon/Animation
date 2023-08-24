@@ -7,5 +7,25 @@
 
 // incr, decr
 
-let increment  = 10;
-let decrement = 10;
+// let increment  = 10;
+// let decrement = 10;
+
+const numbersOfSeries = +prompt("Nechita serial ko'rdingiz","");
+
+const seriesDB = {
+    count: numbersOfSeries,
+    series:{},
+    actors:{},
+    genres:[],
+    private: false,
+};
+
+const a = prompt("Oxirgi ko'rgan serialingiz?"),
+    b = prompt("Nechi baxo berasiz?"),
+    c = prompt("Oxirgi ko'rgan serialingiz?"),
+    d = prompt("Nechi baxo berasiz?");
+
+seriesDB.series[a] = b;
+seriesDB.series[c] = d;
+
+console.log(seriesDB);
