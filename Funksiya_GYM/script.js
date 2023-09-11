@@ -1,5 +1,55 @@
 "use strict";
 
+class Animal{
+    constructor(name){
+        this.speed = 0;
+        this.name = name;
+    }
+    run(speed){
+        this.speed = speed;
+        alert(`${this.name} shu tezlikda yuguryapti ${this.speed}.`);
+    }
+    stop(){
+        this.speed = 0;
+        alert(`${this.name} yugurmayapti.`);
+    }
+}
+class Rabbit extends Animal{
+    hide(){
+        alert(`${this.name} berkinyapti`);
+    }
+    stop(){
+        // super.stop();
+        // this.hide();
+        setTimeout(() => super.stop(), 5000);
+    }
+}
+let rabbit = new Rabbit("Oq quyon");
+let animal = new Animal("Mening hayvonim");
+
+rabbit.run(5);
+rabbit.hide();
+
+// arr.forEach(function{
+    
+// });
+
+//arr.pop(); //ohiridan bitta sonni olib tashlaydi.
+//arr.push(10); // ohiriga 10 sonini qushadi.
+// shift() unshift() hozirda ishlatilmaydi,
+//console.log(arr);
+// arr[99] = 0;
+// console.log(arr);
+// for(let i = 0; i< arr.length; i++){
+//     console.log(arr[i]);
+// }
+
+// for(let value of arr){
+//     console.log(value);
+// }
+
+
+
 //const { setTransitionHooks } = require("vue");
 
 // function sayHelloWorld(){
@@ -52,24 +102,24 @@
 
 // edu("JavaScript", done)
 
-const theif = {
-    jacket: "black",
-    hieght:1.7,
-    colors:{
-        hair:"grey",
-        style:"curley",
-    },
-    howOut: function (){
-        console.log("Fast with help doors");
-    },
-};
-theif.howOut();
-const {hair,style} = theif.colors;
-// const hair = theif.colors.hair;
-// const style = theif.colors.style;
+// // // const theif = {
+// // //     jacket: "black",
+// // //     hieght:1.7,
+// // //     colors:{
+// // //         hair:"grey",
+// // //         style:"curley",
+// // //     },
+// // //     howOut: function (){
+// // //         console.log("Fast with help doors");
+// // //     },
+// // // };
+// // // theif.howOut();
+// // // const {hair,style} = theif.colors;
+// // // // const hair = theif.colors.hair;
+// // // // const style = theif.colors.style;
 
-console.log(hair);
-console.log(style);
+// // // console.log(hair);
+// // // console.log(style);
 // console.log(theif.hieght);
 // delete theif.jacket;
 
