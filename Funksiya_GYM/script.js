@@ -1,34 +1,53 @@
 "use strict";
 
-class Animal{
-    constructor(name){
-        this.speed = 0;
-        this.name = name;
-    }
-    run(speed){
-        this.speed = speed;
-        alert(`${this.name} shu tezlikda yuguryapti ${this.speed}.`);
-    }
-    stop(){
-        this.speed = 0;
-        alert(`${this.name} yugurmayapti.`);
-    }
-}
-class Rabbit extends Animal{
-    hide(){
-        alert(`${this.name} berkinyapti`);
-    }
-    stop(){
-        // super.stop();
-        // this.hide();
-        setTimeout(() => super.stop(), 5000);
-    }
-}
-let rabbit = new Rabbit("Oq quyon");
-let animal = new Animal("Mening hayvonim");
+const movies = prompt("What's your favourite movies","");
+const userMovies = movies.split(",")// massiv ko'rinishida tekisdan oladi
+userMovies.sort(compareFn);// masssivda turgan malumotlarni solishtiradi sartirofka qiladi.
+console.log(userMovies.join(" "));// massiv ko'rinishida turgan ma'lumotlar string tipiga o'tqazib beradi.
 
-rabbit.run(5);
-rabbit.hide();
+
+function compareFn(a,b){
+    return a-b;
+}
+
+// // ko'p ishlatiladi arrayda function
+// // const arr = [2,3,4,5];
+
+// // arr.forEach(function(item, index,arr){
+// //     console.log(`${index}: ${item} into arr ${arr}`);
+// // })
+
+// class Animal{
+//     constructor(name){
+//         this.speed = 0;
+//         this.name = name;
+//     }
+//     run(speed){
+//         this.speed = speed;
+//         alert(`${this.name} shu tezlikda yuguryapti ${this.speed}.`);
+//     }
+//     stop(){
+//         this.speed = 0;
+//         alert(`${this.name} yugurmayapti.`);
+//     }
+// }
+// class Rabbit extends Animal{
+//     hide(){
+//         alert(`${this.name} berkinyapti`);
+//     }
+//     stop(){
+//         // super.stop();
+//         // this.hide();
+//         setTimeout(() => super.stop(), 5000);
+//     }
+// }
+// let rabbit = new Rabbit("Oq quyon");
+// let animal = new Animal("Mening hayvonim");
+
+// rabbit.run(5);
+// rabbit.hide();
+
+
 
 // arr.forEach(function{
     

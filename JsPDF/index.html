@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id = "button" onclick=pdf()>Click ME</button>
+
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script >
+         function pdf(){
+        var doc = new jsPdf()
+        doc.text(`add text hello world`,10,10)
+        doc.save(`output.pdf`)
+     }
+    </script>
+</body>
+</html>
